@@ -1,17 +1,17 @@
-if (project.isAPP) {
-    apply plugin: 'com.android.application'
-} else {
+//if (project.isAPP) {
+//    apply plugin: 'com.android.application'
+//} else {
     apply plugin: 'com.android.library'
-}
+//}
 apply plugin: 'com.github.dcendents.android-maven'
 group = 'com.github.daoyua'
 
 android {
     compileSdkVersion 28
     defaultConfig {
-        if (project.isAPP) {
-            applicationId "module.base.baseframwork"
-        }
+//        if (project.isAPP) {
+//            applicationId "module.base.baseframwork"
+//        }
         minSdkVersion 15
         targetSdkVersion 28
         versionCode 1
