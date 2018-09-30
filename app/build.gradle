@@ -1,5 +1,5 @@
-        apply plugin: 'com.android.application'
-//    apply plugin: 'com.android.library'
+//  apply plugin: 'com.android.application'
+    apply plugin: 'com.android.library'
 
     apply plugin: 'com.github.dcendents.android-maven'
     group = 'com.github.daoyua'
@@ -10,9 +10,7 @@
         compileSdkVersion config.compileSdkVersion
         buildToolsVersion config.buildToolsVersion
         defaultConfig {
-    //        if (project.isAPP) {
     //            applicationId "module.base.baseframwork"
-    //        }
             minSdkVersion config.minSdkVersion
             targetSdkVersion config.targetSdkVersion
             versionCode config.versionCode
