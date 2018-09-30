@@ -88,13 +88,18 @@ public abstract class BaseLoadMoreHeaderAdapter<T> extends RecyclerView.Adapter 
             ((BaseViewHolder) holder).mItemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    mItemClickListener.onItemClick(v, position - 1);
+                    if(mLongItemClickListener!=null){
+                        mItemClickListener.onItemClick(v, position - 1);
+                    }
                 }
             });
             ((BaseViewHolder) holder).mItemView.setOnLongClickListener(new View.OnLongClickListener() {
                 @Override
                 public boolean onLongClick(View v) {
-                    mLongItemClickListener.onLongItemClick(v, position - 1);
+                    if(mLongItemClickListener!=null){
+                        mLongItemClickListener.onLongItemClick(v, position - 1);
+                    }
+
                     return true;
                 }
             });
