@@ -1,4 +1,4 @@
-package module.base.baseframwork.base;
+package module.base.baseframwork;
 
 import android.os.Bundle;
 

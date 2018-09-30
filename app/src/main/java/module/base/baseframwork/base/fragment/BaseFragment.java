@@ -1,4 +1,4 @@
-package module.base.baseframwork.base;
+package module.base.baseframwork.base.fragment;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -9,6 +9,8 @@ import android.view.ViewGroup;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
+import module.base.baseframwork.base.presenter.BasePresenter;
+import module.base.baseframwork.base.view.BaseFragmentView;
 
 public abstract class BaseFragment <T extends BasePresenter> extends Fragment implements BaseFragmentView {
 

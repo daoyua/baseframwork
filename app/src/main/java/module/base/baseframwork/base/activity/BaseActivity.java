@@ -1,4 +1,4 @@
-package module.base.baseframwork.base;
+package module.base.baseframwork.base.activity;
 
 
 import android.os.Bundle;
@@ -7,6 +7,7 @@ import android.view.WindowManager;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import module.base.baseframwork.base.view.BaseView;
 
 
 public abstract class BaseActivity extends AppCompatActivity implements BaseView {

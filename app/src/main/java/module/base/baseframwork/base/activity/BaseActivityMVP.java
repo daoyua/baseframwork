@@ -1,8 +1,11 @@
-package module.base.baseframwork.base;
+package module.base.baseframwork.base.activity;
 
 import android.os.Bundle;
 
-public abstract class BaseActivityMVP <T extends BasePresenter> extends BaseActivity implements BaseView{
+import module.base.baseframwork.base.presenter.BasePresenter;
+import module.base.baseframwork.base.view.BaseView;
+
+public abstract class BaseActivityMVP <T extends BasePresenter> extends BaseActivity implements BaseView {
 
     /***基础的presenter**/
     protected T mPresenter;

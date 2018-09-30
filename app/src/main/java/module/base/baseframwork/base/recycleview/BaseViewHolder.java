@@ -1,4 +1,4 @@
-package module.base.baseframwork.base;
+package module.base.baseframwork.base.recycleview;
 
 import android.annotation.SuppressLint;
 import android.graphics.Bitmap;

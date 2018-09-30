@@ -1,6 +1,8 @@
-package module.base.baseframwork.base;
+package module.base.baseframwork.base.presenter;
 
 import android.os.Bundle;
+
+import module.base.baseframwork.base.view.BaseView;
 
 public abstract class BasePresenter <T extends BaseView>{
 

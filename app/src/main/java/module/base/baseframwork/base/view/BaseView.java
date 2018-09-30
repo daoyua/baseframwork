@@ -1,4 +1,4 @@
-package module.base.baseframwork.base;
+package module.base.baseframwork.base.view;
 
 public interface BaseView {
     /**
