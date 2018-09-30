@@ -1,16 +1,23 @@
-apply plugin: 'com.android.library'
-//apply plugin: 'com.android.application'
+if (project.isAPP) {
+    apply plugin: 'com.android.application'
+} else {
+    apply plugin: 'com.android.library'
+}
 apply plugin: 'com.github.dcendents.android-maven'
-group='com.github.daoyua'
+group = 'com.github.daoyua'
+
 android {
     compileSdkVersion 28
     defaultConfig {
-//        applicationId "module.base.baseframwork"
+        if (project.isAPP) {
+            applicationId "module.base.baseframwork"
+        }
         minSdkVersion 15
         targetSdkVersion 28
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        buildConfigField 'boolean', 'isAPPorLi', 'false'
     }
     buildTypes {
         release {
@@ -18,13 +25,22 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+    //    productFlavors {
+    //        Applica {
+    //            applicationId 'module.base.baseframwork'
+    //        }
+    //        isLibrary {
+    //
+    //        }
+    //    }
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation 'androidx.appcompat:appcompat:1.0.0-alpha1'
     implementation 'androidx.constraintlayout:constraintlayout:1.1.2'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test:runner:1.1.0-alpha3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0-alpha3'
+    implementation 'com.google.code.gson:gson:2.8.5'
 }

@@ -1,14 +1,15 @@
-package module.base.baseframwork;
+package module.base.baseframwork.base;
 
 import androidx.appcompat.app.AppCompatActivity;
+import module.base.baseframwork.R;
 
 import android.os.Bundle;
 
-public class MainActivity extends AppCompatActivity {
+public class TestActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_test);
     }
 }
