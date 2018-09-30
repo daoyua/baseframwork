@@ -1,46 +1,45 @@
-//if (project.isAPP) {
-//    apply plugin: 'com.android.application'
-//} else {
+    //if (project.isAPP) {
+    //    apply plugin: 'com.android.application'
+    //} else {
     apply plugin: 'com.android.library'
-//}
-apply plugin: 'com.github.dcendents.android-maven'
-group = 'com.github.daoyua'
-
-android {
-    compileSdkVersion 28
-    defaultConfig {
-//        if (project.isAPP) {
-//            applicationId "module.base.baseframwork"
-//        }
-        minSdkVersion 15
-        targetSdkVersion 28
-        versionCode 1
-        versionName "1.0"
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-        buildConfigField 'boolean', 'isAPPorLi', 'false'
-    }
-    buildTypes {
-        release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+    //}
+    apply plugin: 'com.github.dcendents.android-maven'
+    group = 'com.github.daoyua'
+    def config = rootProject.ext.android
+    def mlibrarys = rootProject.ext.dependencies
+    //def isAPP = false
+    android {
+        compileSdkVersion config.compileSdkVersion
+        buildToolsVersion config.buildToolsVersion
+        defaultConfig {
+    //        if (project.isAPP) {
+    //            applicationId "module.base.baseframwork"
+    //        }
+            minSdkVersion config.minSdkVersion
+            targetSdkVersion config.targetSdkVersion
+            versionCode config.versionCode
+            versionName config.versionName
+            testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        }
+        buildTypes {
+            release {
+                minifyEnabled false
+                proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            }
         }
     }
-    //    productFlavors {
-    //        Applica {
-    //            applicationId 'module.base.baseframwork'
-    //        }
-    //        isLibrary {
-    //
-    //        }
-    //    }
-}
 
-dependencies {
-    implementation fileTree(include: ['*.jar'], dir: 'libs')
-    implementation 'androidx.appcompat:appcompat:1.0.0-alpha1'
-    implementation 'androidx.constraintlayout:constraintlayout:1.1.2'
-    testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'androidx.test:runner:1.1.0-alpha3'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0-alpha3'
-    implementation 'com.google.code.gson:gson:2.8.5'
-}
+    dependencies {
+        implementation fileTree(include: ['*.jar'], dir: 'libs')
+
+        api mlibrarys.appcompat
+        implementation mlibrarys.constraintlayout
+        implementation mlibrarys.legacy_support
+        testImplementation mlibrarys.junit
+        androidTestImplementation mlibrarys.test_runner
+        androidTestImplementation mlibrarys.test_espresso
+        implementation mlibrarys.material
+
+        implementation mlibrarys.recyclerview
+        implementation mlibrarys.gson
+    }
