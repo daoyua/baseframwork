@@ -41,10 +41,11 @@ public abstract class BaseLoadMoreHeaderAdapter<T> extends RecyclerView.Adapter 
                 int lastVisibleItemPosition = linearLayoutManager.findLastVisibleItemPosition();
                 if (!isLoading && dy > 0 && lastVisibleItemPosition >= totalItemCount - 1) {
                     //此时是刷新状态
+                    isLoading = true;
                     if (mOnLoadMoreListener != null) {
                         mOnLoadMoreListener.onLoadMore();
                     }
-                    isLoading = true;
+
                 }
             }
         });
@@ -89,7 +90,7 @@ public abstract class BaseLoadMoreHeaderAdapter<T> extends RecyclerView.Adapter 
                 @Override
                 public void onClick(View v) {
                     if(mLongItemClickListener!=null){
-                        mItemClickListener.onItemClick(v, position - 1);
+                        mItemClickListener.onItemClick(v, position );
                     }
                 }
             });
@@ -97,7 +98,7 @@ public abstract class BaseLoadMoreHeaderAdapter<T> extends RecyclerView.Adapter 
                 @Override
                 public boolean onLongClick(View v) {
                     if(mLongItemClickListener!=null){
-                        mLongItemClickListener.onLongItemClick(v, position - 1);
+                        mLongItemClickListener.onLongItemClick(v, position);
                     }
 
                     return true;
