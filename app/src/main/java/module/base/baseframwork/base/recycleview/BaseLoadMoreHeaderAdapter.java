@@ -89,7 +89,7 @@ public abstract class BaseLoadMoreHeaderAdapter<T> extends RecyclerView.Adapter 
             ((BaseViewHolder) holder).mItemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    if(mLongItemClickListener!=null){
+                    if(mItemClickListener!=null){
                         mItemClickListener.onItemClick(v, position );
                     }
                 }
