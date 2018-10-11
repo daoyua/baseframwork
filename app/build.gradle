@@ -38,4 +38,12 @@
 
         implementation mlibrarys.recyclerview
         implementation mlibrarys.gson
+
+
+        implementation mlibrarys.retrofit2
+        implementation mlibrarys.retrofit2_converter_gson
+        implementation mlibrarys.adapter_rxjava2
+        implementation mlibrarys.okhttp3_logging
+        implementation mlibrarys.rxjava2
+        implementation mlibrarys.rxandroid
     }
