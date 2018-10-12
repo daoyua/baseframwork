@@ -1,4 +1,4 @@
-package module.base.baseframwork;
+package module.base.baseframwork.untils;
 
 import android.content.Context;
 import android.content.pm.PackageInfo;
@@ -11,8 +11,6 @@ import java.io.Writer;
 import java.lang.reflect.Field;
 import java.util.HashMap;
 import java.util.Map;
-
-import module.base.baseframwork.untils.LogUtils;
 
 public class CrashHandler implements Thread.UncaughtExceptionHandler {
 
