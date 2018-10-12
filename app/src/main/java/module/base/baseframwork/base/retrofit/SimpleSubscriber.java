@@ -19,7 +19,7 @@ public  abstract class SimpleSubscriber<T> implements Observer<T> {
     public void onSubscribe(Disposable d) {
         disposable = d;
     }
-
+    abstract void setDisposable(Disposable d);
     @Override
     public void onNext(T t) {//这里的是获得了数据,方法意思很明显,下一步干啥
         if (t != null) {//这里最好判断一下是否为null.

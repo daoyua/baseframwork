@@ -30,8 +30,10 @@ public abstract class BasePresenter <T extends BaseView>{
         myCompositeDisposable.dispose();
 //        compositeDisposable.clear();
     }
+
     /**
      * 容易被回收掉时保存数据
      */
     public abstract void onSaveInstanceState(Bundle outState);
+    public abstract void addObservableToCompositeDisposable(Bundle outState);
 }
