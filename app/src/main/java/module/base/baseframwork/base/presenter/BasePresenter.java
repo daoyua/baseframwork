@@ -7,6 +7,7 @@ import module.base.baseframwork.base.view.BaseView;
 public abstract class BasePresenter <T extends BaseView>{
 
     protected T mView;
+//    protected CompositeSubscription compositeSubscription;
     /**
      * 绑定View
      */
