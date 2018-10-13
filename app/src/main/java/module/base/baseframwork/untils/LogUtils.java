@@ -258,7 +258,7 @@ public class LogUtils {
 //        String callerClazzName = caller.getClassName();
 //        callerClazzName = callerClazzName.substring(callerClazzName.lastIndexOf(".") + 1);
 //        return String.format(format, callerClazzName, caller.getMethodName(), caller.getLineNumber());
-        return "错误信息";
+        return "我的信息";
     }
 }
 
