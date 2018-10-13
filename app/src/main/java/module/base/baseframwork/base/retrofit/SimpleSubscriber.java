@@ -10,16 +10,21 @@ import io.reactivex.Observer;
 import io.reactivex.disposables.Disposable;
 import retrofit2.HttpException;
 
-public  abstract class SimpleSubscriber<T> implements Observer<T> {
-
+public  abstract class SimpleSubscriber<T> implements Observer<T>,CompositeDisposableInter {
     protected String errMsg = "";
     protected Disposable disposable;
 
+
+    /**
+     * 初始化接口，把disposable放入compositeDisposable
+     * @return
+     */
+    abstract CompositeDisposableInter initCompositeDisposableInter();
     @Override
     public void onSubscribe(Disposable d) {
         disposable = d;
+        initCompositeDisposableInter().setDidposable(d);
     }
-    abstract void setDisposable(Disposable d);
     @Override
     public void onNext(T t) {//这里的是获得了数据,方法意思很明显,下一步干啥
         if (t != null) {//这里最好判断一下是否为null.

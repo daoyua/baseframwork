@@ -3,11 +3,13 @@ package module.base.baseframwork.base.presenter;
 import android.os.Bundle;
 
 import io.reactivex.disposables.CompositeDisposable;
+import module.base.baseframwork.base.retrofit.CompositeDisposableInter;
 import module.base.baseframwork.base.view.BaseView;
 
-public abstract class BasePresenter <T extends BaseView>{
+public abstract class BasePresenter< T extends BaseView> implements CompositeDisposableInter {
 
     protected T mView;
+
     protected CompositeDisposable myCompositeDisposable;
     /**
      * 绑定View
@@ -16,6 +18,9 @@ public abstract class BasePresenter <T extends BaseView>{
         this.mView = view;
         myCompositeDisposable=new CompositeDisposable();
     }
+
+
+
     /**
      * 做初始化的操作,需要在view的视图初始化完成之后才能调用
      */
@@ -35,5 +40,4 @@ public abstract class BasePresenter <T extends BaseView>{
      * 容易被回收掉时保存数据
      */
     public abstract void onSaveInstanceState(Bundle outState);
-    public abstract void addObservableToCompositeDisposable(Bundle outState);
 }

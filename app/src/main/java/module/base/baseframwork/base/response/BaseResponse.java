@@ -13,6 +13,5 @@ public class BaseResponse<T> implements Serializable {
     @SerializedName("status")
     public String status;
 
-    @SerializedName("data")
-    public T data;
+
 }
