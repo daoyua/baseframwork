@@ -36,8 +36,6 @@ public abstract class BaseActivity extends AppCompatActivity implements BaseView
         setContentView(intiLayout());
         // 初始化控件
         initView();
-        //设置数据
-        initData();
 
 
     }
@@ -49,7 +47,7 @@ public abstract class BaseActivity extends AppCompatActivity implements BaseView
 
     public abstract int intiLayout();
 
-    public abstract int initData();
+  
 
     /**
      * 是否设置标题栏     *     * @return

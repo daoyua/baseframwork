@@ -22,8 +22,9 @@ public abstract class BaseActivityMVP <T extends BasePresenter> extends BaseActi
         onCreateActivity(savedInstanceState);
         //初始化Presenter
         mPresenter.onCreate();
+        initData();
     }
-
+    public abstract void initData();
     protected abstract T initPresenter();
     @Override
     public void onSaveInstanceState(Bundle outState) {
