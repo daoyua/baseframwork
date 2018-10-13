@@ -9,14 +9,10 @@ ext{
             versionName: "1.0"
     ]
     dependencies=[
-            appcompat :'androidx.appcompat:appcompat:1.0.0-alpha1',
-            constraintlayout: 'androidx.constraintlayout:constraintlayout:1.1.2',
-            legacy_support: 'androidx.legacy:legacy-support-v4:1.0.0-alpha1',
-            junit: 'junit:junit:4.12',
-            test_runner :'androidx.test:runner:1.1.0-alpha3',
-            test_espresso: 'androidx.test.espresso:espresso-core:3.1.0-alpha3',
-            material :'com.google.android.material:material:1.0.0-alpha1',
 
+
+            legacy_support: 'androidx.legacy:legacy-support-v4:1.0.0-alpha1',
+            material :'com.google.android.material:material:1.0.0-alpha1',
             gson :'com.google.code.gson:gson:2.8.5',
             recyclerview: 'androidx.recyclerview:recyclerview:1.0.0-rc01',
 
@@ -25,7 +21,13 @@ ext{
             adapter_rxjava2 :'com.squareup.retrofit2:adapter-rxjava2:2.4.0',
             okhttp3_logging:'com.squareup.okhttp3:logging-interceptor:3.11.0',
             rxjava2 :'io.reactivex.rxjava2:rxjava:2.2.2',
-            rxandroid: 'io.reactivex.rxjava2:rxandroid:2.1.0'
+            rxandroid: 'io.reactivex.rxjava2:rxandroid:2.1.0',
+
+            junit: 'junit:junit:4.12',
+            test_runner :'androidx.test:runner:1.1.0-alpha3',
+            test_espresso: 'androidx.test.espresso:espresso-core:3.1.0-alpha3',
+            constraintlayout: 'androidx.constraintlayout:constraintlayout:1.1.2',
+            appcompat :'androidx.appcompat:appcompat:1.0.0-alpha1'
     ]
 
 

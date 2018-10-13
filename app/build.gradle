@@ -1,5 +1,5 @@
-apply plugin: 'com.android.application'
-//    apply plugin: 'com.android.library'
+//apply plugin: 'com.android.application'
+    apply plugin: 'com.android.library'
 
 apply plugin: 'com.github.dcendents.android-maven'
 group = 'com.github.daoyua'
@@ -10,7 +10,7 @@ android {
     compileSdkVersion config.compileSdkVersion
     buildToolsVersion config.buildToolsVersion
     defaultConfig {
-        applicationId "module.base.baseframwork"
+//        applicationId "module.base.baseframwork"
         minSdkVersion config.minSdkVersion
         targetSdkVersion config.targetSdkVersion
         versionCode config.versionCode
@@ -29,11 +29,12 @@ dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
 
     api mlibrarys.appcompat
-    implementation mlibrarys.constraintlayout
-    implementation mlibrarys.legacy_support
     implementation mlibrarys.junit
     implementation mlibrarys.test_runner
     implementation mlibrarys.test_espresso
+    implementation mlibrarys.constraintlayout
+
+    implementation mlibrarys.legacy_support
     implementation mlibrarys.material
 
     implementation mlibrarys.recyclerview
