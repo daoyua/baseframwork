@@ -2,12 +2,12 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="module.base.baseframwork">
 
-    <application
-        android:allowBackup="false"
+    <!--<application-->
+        <!--android:allowBackup="false"-->
 
-        android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        <!--android:supportsRtl="true"-->
+        <!--android:theme="@style/AppTheme">-->
 
-    </application>
-
+    <!--</application>-->
+    <application></application>
 </manifest>
