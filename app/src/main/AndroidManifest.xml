@@ -3,7 +3,7 @@
     package="module.base.baseframwork">
 
     <application
-        android:allowBackup="true"
+        android:allowBackup="false"
 
         android:supportsRtl="true"
         android:theme="@style/AppTheme">

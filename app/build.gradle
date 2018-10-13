@@ -26,27 +26,27 @@ android {
 }
 
 dependencies {
-    implementation fileTree(include: ['*.jar'], dir: 'libs')
+//    implementation fileTree(include: ['*.jar'], dir: 'libs')
 
     api mlibrarys.appcompat
-    implementation mlibrarys.junit
-    implementation mlibrarys.test_runner
-    implementation mlibrarys.test_espresso
-    implementation mlibrarys.constraintlayout
+    api mlibrarys.junit
+    api mlibrarys.test_runner
+    api mlibrarys.test_espresso
+    api mlibrarys.constraintlayout
 
-    implementation mlibrarys.legacy_support
-    implementation mlibrarys.material
+    api mlibrarys.legacy_support
+    api mlibrarys.material
 
-    implementation mlibrarys.recyclerview
-    implementation mlibrarys.gson
+    api mlibrarys.recyclerview
+    api mlibrarys.gson
 
 
-    implementation mlibrarys.retrofit2
-    implementation mlibrarys.retrofit2_converter_gson
-    implementation mlibrarys.adapter_rxjava2
-    implementation mlibrarys.okhttp3_logging
-    implementation mlibrarys.rxjava2
-    implementation mlibrarys.rxandroid
+    api mlibrarys.retrofit2
+    api mlibrarys.retrofit2_converter_gson
+    api mlibrarys.adapter_rxjava2
+    api mlibrarys.okhttp3_logging
+    api mlibrarys.rxjava2
+    api mlibrarys.rxandroid
 //    implementation 'com.android.support:appcompat-v7:28.0.0'
 //    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
 }
