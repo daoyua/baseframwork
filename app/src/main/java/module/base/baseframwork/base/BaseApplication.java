@@ -5,6 +5,7 @@ import android.content.Context;
 
 import module.base.baseframwork.untils.CrashHandler;
 import module.base.baseframwork.base.retrofit.RetrofitFactory;
+import module.base.baseframwork.untils.MyConfig;
 
 
 public abstract class BaseApplication extends Application {
@@ -18,7 +19,8 @@ public abstract class BaseApplication extends Application {
         CrashHandler crashHandler = CrashHandler.getInstance();
         crashHandler.init(getApplicationContext());
         mContext = this;
-        RetrofitFactory.setHostUrl(initHostUrl());
+        MyConfig.HOST_URL=initHostUrl();
+        RetrofitFactory.setHostUrl(MyConfig.HOST_URL);
 
     }
     public abstract String initHostUrl();

@@ -34,7 +34,7 @@ public  class RetrofitFactory {
             }
 
 //            retrofit=  Rxtrofit2Instance.getInstanace(hostUrl);
-            retrofit= Rxtrofit2Instance.getInstanace(hostUrl);
+            retrofit= Retrofit2Instance.getInstanace(hostUrl);
         }
         return  retrofit;
     }
