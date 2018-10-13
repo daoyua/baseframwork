@@ -3,10 +3,9 @@ package module.base.baseframwork.base.presenter;
 import android.os.Bundle;
 
 import io.reactivex.disposables.CompositeDisposable;
-import module.base.baseframwork.base.retrofit.CompositeDisposableInter;
 import module.base.baseframwork.base.view.BaseView;
 
-public abstract class BasePresenter< T extends BaseView> implements CompositeDisposableInter {
+public abstract class BasePresenter< T extends BaseView>   {
 
     protected T mView;
 
