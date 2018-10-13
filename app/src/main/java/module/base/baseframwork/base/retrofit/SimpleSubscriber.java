@@ -10,7 +10,7 @@ import io.reactivex.Observer;
 import io.reactivex.disposables.Disposable;
 import retrofit2.HttpException;
 
-public  abstract class SimpleSubscriber<T> implements Observer<T>,CompositeDisposableInter {
+public  abstract class SimpleSubscriber<T> implements Observer<T> {
     protected String errMsg = "";
     protected Disposable disposable;
 
@@ -19,7 +19,7 @@ public  abstract class SimpleSubscriber<T> implements Observer<T>,CompositeDispo
      * 初始化接口，把disposable放入compositeDisposable
      * @return
      */
-    abstract CompositeDisposableInter initCompositeDisposableInter();
+   public abstract CompositeDisposableInter initCompositeDisposableInter();
     @Override
     public void onSubscribe(Disposable d) {
         disposable = d;
