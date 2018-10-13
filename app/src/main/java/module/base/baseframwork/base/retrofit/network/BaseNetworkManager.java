@@ -12,6 +12,7 @@ import retrofit2.Retrofit;
 public class BaseNetworkManager {
 
         public static Retrofit retrofit= RetrofitFactory.getRetrofit();
+
         public static Observable<BaseResponse> TestConnect(String address){
             BaseNetworkInterface baseNetworkInterface = retrofit.create(BaseNetworkInterface.class);
             if(TextUtils.isEmpty(address)){
