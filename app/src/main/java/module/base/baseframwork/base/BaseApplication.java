@@ -22,6 +22,7 @@ public abstract class BaseApplication extends Application {
         MyConfig.HOST_URL=initHostUrl();
         RetrofitFactory.setHostUrl(MyConfig.HOST_URL);
 
+
     }
     public abstract String initHostUrl();
 }

@@ -3,6 +3,7 @@ package module.base.baseframwork.base.presenter;
 import android.os.Bundle;
 
 import io.reactivex.disposables.CompositeDisposable;
+import io.reactivex.disposables.Disposable;
 import module.base.baseframwork.base.view.BaseView;
 
 public abstract class BasePresenter< T extends BaseView>  {
@@ -16,6 +17,14 @@ public abstract class BasePresenter< T extends BaseView>  {
     public void onAttch(T view) {
         this.mView = view;
         myCompositeDisposable=new CompositeDisposable();
+    } /**
+     * 添加ob到compo
+     */
+    public void addDispos(Disposable d) {
+        if(d!=null&&myCompositeDisposable!=null){
+            myCompositeDisposable.add(d);
+        }
+//        myCompositeDisposable.add(d)
     }
 
 
