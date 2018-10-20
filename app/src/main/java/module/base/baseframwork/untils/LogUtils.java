@@ -258,7 +258,14 @@ public class LogUtils {
 //        String callerClazzName = caller.getClassName();
 //        callerClazzName = callerClazzName.substring(callerClazzName.lastIndexOf(".") + 1);
 //        return String.format(format, callerClazzName, caller.getMethodName(), caller.getLineNumber());
-        return "我的信息";
+        StringBuffer sb = new StringBuffer();
+        sb.append(Thread.currentThread().getName());
+        sb.append("-> ");
+        sb.append(Thread.currentThread().getStackTrace()[3].getMethodName());
+        sb.append("()");
+        sb.append(" ");
+        return sb.toString();
+//        return "我的信息";
     }
 }
 
