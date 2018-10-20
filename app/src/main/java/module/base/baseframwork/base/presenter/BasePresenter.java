@@ -54,8 +54,8 @@ public abstract class BasePresenter< T extends BaseView>  {
     public abstract void onSaveInstanceState(Bundle outState);
 
 
-    protected void openRxbus(boolean isOpen){
-        if (isOpen){
+    public void openRxbus( ){
+
             //注册eventbus
             Disposable disposable = RxBus.getDefault().register(Event.class, new Consumer<Event>() {
                 @Override
@@ -76,8 +76,12 @@ public abstract class BasePresenter< T extends BaseView>  {
             });
             addDispos(disposable);
             LogUtils.e("Rxbus is opened");
-        }
+
     }
 
+    /**
+     * 重写rxbus会传递信息
+     * @param event
+     */
     public abstract void onEvent(Event event);
 }
