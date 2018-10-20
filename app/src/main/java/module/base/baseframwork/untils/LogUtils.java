@@ -258,6 +258,15 @@ public class LogUtils {
 //        String callerClazzName = caller.getClassName();
 //        callerClazzName = callerClazzName.substring(callerClazzName.lastIndexOf(".") + 1);
 //        return String.format(format, callerClazzName, caller.getMethodName(), caller.getLineNumber());
+
+        return "打印信息" ;
+    }
+    /**
+     * 得到调用此方法的线程的线程名
+     *
+     * @return
+     */
+    public static String getThreadName() {
         StringBuffer sb = new StringBuffer();
         sb.append(Thread.currentThread().getName());
         sb.append("-> ");
@@ -265,7 +274,6 @@ public class LogUtils {
         sb.append("()");
         sb.append(" ");
         return sb.toString();
-//        return "我的信息";
     }
 }
 
