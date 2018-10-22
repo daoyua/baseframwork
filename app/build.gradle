@@ -1,21 +1,27 @@
 //apply plugin: 'com.android.application'
+//    apply plugin: 'com.android.library'
+if (isPlugin.toBoolean()) {
+    apply plugin: 'com.android.application'
+} else {
     apply plugin: 'com.android.library'
-
+}
 apply plugin: 'com.github.dcendents.android-maven'
 group = 'com.github.daoyua'
 def config = rootProject.ext.android
 def mlibrarys = rootProject.ext.dependencies
-//def isAPP = false
 android {
-    compileSdkVersion config.compileSdkVersion
-    buildToolsVersion config.buildToolsVersion
+    compileSdkVersion 28
+    buildToolsVersion '28.0.0'
     defaultConfig {
-//        applicationId "module.base.baseframwork"
-        minSdkVersion config.minSdkVersion
-        targetSdkVersion config.targetSdkVersion
-        versionCode config.versionCode
-        versionName config.versionName
+        if (isPlugin.toBoolean()) {
+            applicationId "module.base.baseframwork"
+        }
+        minSdkVersion 25
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
     }
     buildTypes {
         release {
