@@ -1,6 +1,7 @@
 package module.base.baseframwork.base.activity;
 
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.view.Window;
 import android.view.WindowManager;

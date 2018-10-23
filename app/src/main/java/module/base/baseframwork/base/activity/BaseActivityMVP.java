@@ -1,5 +1,6 @@
 package module.base.baseframwork.base.activity;
 
+import android.app.Activity;
 import android.os.Bundle;
 
 import module.base.baseframwork.base.presenter.BasePresenter;
@@ -45,5 +46,9 @@ public abstract class BaseActivityMVP <T extends BasePresenter> extends BaseActi
      */
     protected abstract void onCreateActivity(Bundle savedInstanceState);
 
+    @Override
+    public Activity getContext() {
+        return this;
+    }
 
 }
