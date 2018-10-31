@@ -1,6 +1,7 @@
 package module.base.baseframwork.base.view;
 
 import android.app.Activity;
+import android.content.Context;
 
 public interface BaseView {
     /**
@@ -13,5 +14,5 @@ public interface BaseView {
      * 获取activity
      * @param
      */
-     Activity getContext( );
+     Context getContext( );
 }

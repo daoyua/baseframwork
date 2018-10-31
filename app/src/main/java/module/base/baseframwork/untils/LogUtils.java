@@ -1,5 +1,6 @@
 package module.base.baseframwork.untils;
 
+import android.app.Activity;
 import android.os.Environment;
 import android.util.Log;
 
@@ -178,7 +179,16 @@ public class LogUtils {
      * Error日志 * * @param msg 消息
      */
     public static void e(Object msg) {
-        log(tag, msg.toString(), null, 'e');
+        log(tag, msg.toString()+getThreadName(),null, 'e');
+    }
+    public static void e(Object msg,int i) {
+        log(tag, msg.toString()+getThreadName(i), null, 'e');
+    }
+    /**
+     * Error日志 * * @param msg 消息
+     */
+    public static void e(String msg,String threadInfo) {
+        log(tag, msg+threadInfo, null, 'e');
     }
 
     /**
@@ -219,6 +229,7 @@ public class LogUtils {
      * 打开日志文件并写入日志 * * @param type 日志类型 * @param tag 标签 * @param content 内容
      **/
     private synchronized static void log2File(final char type, final String tag, final String content) {
+
         if (content == null) return;
         Date now = new Date();
         String date = new SimpleDateFormat("MM-dd", Locale.getDefault()).format(now);
@@ -227,6 +238,7 @@ public class LogUtils {
         if (!file.exists()) return;
         String time = new SimpleDateFormat("MM-dd HH:mm:ss.SSS", Locale.getDefault()).format(now);
         final String dateLogContent = time + ":" + type + ":" + tag + ":" + content + '\n';
+        e("输出日志到文件"+fullPath+dateLogContent);
         new Thread(new Runnable() {
             @Override
             public void run() {
@@ -252,27 +264,47 @@ public class LogUtils {
      * 产生tag * * @return tag
      */
     private static String generateTag(String tag) {
-//        StackTraceElement[] stacks = Thread.currentThread().getStackTrace();
-//        StackTraceElement caller = stacks[4];
-//        String format =  tag + " %s[%s, %d]";
-//        String callerClazzName = caller.getClassName();
-//        callerClazzName = callerClazzName.substring(callerClazzName.lastIndexOf(".") + 1);
-//        return String.format(format, callerClazzName, caller.getMethodName(), caller.getLineNumber());
 
         return "打印信息" ;
     }
     /**
      * 得到调用此方法的线程的线程名
-     *
+     *0，当前，1调用，3 current
      * @return
      */
     public static String getThreadName() {
         StringBuffer sb = new StringBuffer();
-        sb.append(Thread.currentThread().getName());
-        sb.append("-> ");
-        sb.append(Thread.currentThread().getStackTrace()[3].getMethodName());
-        sb.append("()");
-        sb.append(" ");
+        Thread thread = Thread.currentThread();
+        StackTraceElement stackTraceElement = thread.getStackTrace()[4];
+
+        sb.append(" from: class["+stackTraceElement.getClassName()+"]  line:");
+        sb.append(stackTraceElement.getLineNumber()+"");
+        sb.append("  method[");
+        sb.append(stackTraceElement.getMethodName()+"()]\n");
+        sb.append(" thread->"+thread.getName());
+//        sb.append("\n**");
+        return sb.toString();
+    }
+
+    /**
+     *  initview() thread->main class[java.lang.Thread]-> getStackTrace() 1536:
+     * initview() thread->main class[module.base.baseframwork.untils.LogUtils]-> getThreadName() 280:
+     *  initview() thread->main class[module.base.baseframwork.base.activity.BaseActivity]-> mylog() 56:
+     *  initview() thread->main class[module.base.baseframwork.base.activity.BaseActivity]-> onCreate() 50:
+     *  initview()thread->main class[module.base.baseframwork.base.activity.BaseActivityMVP]-> onCreate() 17:
+     * @return
+     */
+    public static String getThreadName(int i) {
+        StringBuffer sb = new StringBuffer();
+        Thread thread = Thread.currentThread();
+        StackTraceElement stackTraceElement = thread.getStackTrace()[i];
+
+        sb.append(" from: class["+stackTraceElement.getClassName()+"]  line:");
+        sb.append(stackTraceElement.getLineNumber()+"");
+        sb.append("  method[");
+        sb.append(stackTraceElement.getMethodName()+"()]\n");
+        sb.append(" thread->"+thread.getName());
+
         return sb.toString();
     }
 }

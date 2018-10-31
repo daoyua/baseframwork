@@ -1,6 +1,7 @@
 package module.base.baseframwork.base.presenter;
 
 import android.app.Activity;
+import android.content.Context;
 import android.os.Bundle;
 import android.util.Log;
 
@@ -15,7 +16,7 @@ import module.base.baseframwork.untils.LogUtils;
 public abstract class BasePresenter< T extends BaseView>  {
 
     protected T mView;
-    protected Activity mActivity;
+    protected Context mActivity;
 
     protected CompositeDisposable myCompositeDisposable;
     /**

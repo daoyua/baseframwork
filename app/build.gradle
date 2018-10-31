@@ -21,7 +21,10 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-
+        javaCompileOptions {
+            annotationProcessorOptions
+                    { includeCompileClasspath = true }
+        }
     }
     buildTypes {
         release {
@@ -29,6 +32,12 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+
+    }
+
     sourceSets {
         main {
             if (isApp.toBoolean()) {
@@ -49,16 +58,20 @@ dependencies {
     api mlibrarys.constraintlayout
     api mlibrarys.legacy_support
     api mlibrarys.material
+
     api mlibrarys.recyclerview
     api mlibrarys.gson
+
     api mlibrarys.retrofit2
     api mlibrarys.retrofit2_converter_gson
+
     api mlibrarys.adapter_rxjava2
     api mlibrarys.okhttp3_logging
-//    api mlibrarys.rxjava2
     api mlibrarys.rxandroid
-    implementation 'com.jakewharton.rxbinding3:rxbinding:3.0.0-alpha1'
-    implementation 'com.jakewharton.rxrelay2:rxrelay:2.1.0'
-    implementation 'androidx.appcompat:appcompat:1.0.0-alpha1'
-    implementation 'androidx.constraintlayout:constraintlayout:1.1.2'
+    api 'com.jakewharton.rxbinding3:rxbinding:3.0.0-alpha1'//rxview rxbinding包含了rxjava2  //    api mlibrarys.rxjava2
+
+    api 'com.jakewharton.rxrelay2:rxrelay:2.1.0' //rxbus
+
+    api 'com.google.dagger:dagger:2.19'
+    annotationProcessor 'com.google.dagger:dagger-compiler:2.19'
 }

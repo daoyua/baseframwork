@@ -9,6 +9,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import module.base.baseframwork.base.view.BaseView;
+import module.base.baseframwork.untils.LogUtils;
 
 
 public abstract class BaseActivity extends AppCompatActivity implements BaseView {
@@ -37,11 +38,16 @@ public abstract class BaseActivity extends AppCompatActivity implements BaseView
         setContentView(intiLayout());
         // 初始化控件
         initView();
-
+//        myLogE("initView()",LogUtils.getTraceInfo());
+//        LogUtils.e("initView()", LogUtils.getThreadName®());
+//        mylog("initview（）");
 
     }
 
 
+    public void mylog(String s){
+        LogUtils.e(s,LogUtils.getThreadName());
+    }
     protected abstract void initView();
 
     protected abstract BaseActivity getActivity();
@@ -93,5 +99,6 @@ public abstract class BaseActivity extends AppCompatActivity implements BaseView
             toast.show();
         }
     }
+
 
 }
