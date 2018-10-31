@@ -12,8 +12,7 @@ import module.base.baseframwork.base.rxbus.RxBus;
 import module.base.baseframwork.base.view.BaseView;
 import module.base.baseframwork.untils.LogUtils;
 
-public abstract class BasePresenterMVP< T extends BaseView>  {
-
+public abstract class BasePresenter< T extends BaseView>  {
 
     protected T mView;
     protected Context mActivity;
@@ -25,7 +24,7 @@ public abstract class BasePresenterMVP< T extends BaseView>  {
     public void onAttch(T view) {
         this.mView = view;
         myCompositeDisposable=new CompositeDisposable();
-        mActivity= view.getContext();
+        mActivity=this.mView.getContext();
     } /**
      * 添加ob到compo
      */

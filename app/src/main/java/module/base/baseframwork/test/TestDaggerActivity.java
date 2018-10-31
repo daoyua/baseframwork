@@ -5,28 +5,27 @@ import android.os.Bundle;
 import androidx.fragment.app.FragmentActivity;
 import module.base.baseframwork.R;
 import module.base.baseframwork.base.activity.BaseActivity;
-import module.base.baseframwork.base.activity.BaseActivityDagger2;
+import module.base.baseframwork.base.activity.BaseActivityMVP;
 import module.base.baseframwork.base.rxbus.Event;
 import module.base.baseframwork.base.rxbus.RxBus;
 import module.base.baseframwork.test.mvp.presenter.TestPresenter;
-import module.base.baseframwork.test.testdagger.DaggerBaseCompone;
 import module.base.baseframwork.untils.LogUtils;
 
 //public class TestDaggerActivity extends BaseActivityMVP<TestPresenter> {
-public class TestDaggerActivity extends BaseActivityDagger2<TestPresenter> {
-
-//    @Override
-//    protected TestPresenter initPresenter() {
-//        return new TestPresenter();
-//    }
-
+public class TestDaggerActivity extends BaseActivityMVP<TestPresenter> {
 
     @Override
-    protected void initPresenter() {
-//           return new TestPresenter();
-        DaggerBaseCompone.builder().build().inject(this);
-//           return mPresenter;
+    protected TestPresenter initPresenter() {
+        return new TestPresenter();
     }
+
+
+//    @Override
+//    protected void initPresenter() {
+////           return new TestPresenter();
+//        DaggerBaseCompone.builder().build().inject(this);
+////           return mPresenter;
+//    }
 
     @Override
     protected void onCreateActivity(Bundle savedInstanceState) {

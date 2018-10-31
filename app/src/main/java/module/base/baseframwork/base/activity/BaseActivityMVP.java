@@ -3,14 +3,12 @@ package module.base.baseframwork.base.activity;
 import android.content.Context;
 import android.os.Bundle;
 
-import javax.inject.Inject;
-
-import module.base.baseframwork.base.presenter.BasePresenterMVP;
+import module.base.baseframwork.base.presenter.BasePresenter;
 import module.base.baseframwork.base.view.BaseView;
 
-public abstract class BaseActivityMVP<T extends BasePresenterMVP> extends BaseActivity implements BaseView {
+public abstract class BaseActivityMVP<T extends BasePresenter> extends BaseActivity implements BaseView {
 
-    @Inject
+
     /***基础的presenter**/
     protected T mPresenter;
 

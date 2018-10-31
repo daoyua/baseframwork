@@ -6,7 +6,7 @@ import java.util.concurrent.TimeUnit;
 
 import io.reactivex.disposables.Disposable;
 import io.reactivex.functions.Predicate;
-import module.base.baseframwork.base.presenter.BasePresenterDagger2;
+import module.base.baseframwork.base.presenter.BasePresenter;
 import module.base.baseframwork.base.retrofit.CompositeDisposableInter;
 import module.base.baseframwork.base.retrofit.SimpleSubscriber;
 import module.base.baseframwork.base.rxbus.Event;
@@ -15,10 +15,10 @@ import module.base.baseframwork.test.mvp.module.UserResponse;
 import module.base.baseframwork.test.mvp.view.TestView;
 import module.base.baseframwork.untils.LogUtils;
 
-public class TestPresenter extends BasePresenterDagger2<TestView> {
+public class TestPresenter extends BasePresenter<TestView> {
     @Override
     public void onCreate() {
-        getdata();
+//        getdata();
     }
 
     @Override
