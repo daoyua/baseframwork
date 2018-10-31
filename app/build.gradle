@@ -71,6 +71,7 @@ dependencies {
     api 'com.jakewharton.rxbinding3:rxbinding:3.0.0-alpha1'//rxview rxbinding包含了rxjava2  //    api mlibrarys.rxjava2
 
     api 'com.jakewharton.rxrelay2:rxrelay:2.1.0' //rxbus
+    api 'com.github.tbruyelle:rxpermissions:0.10.2'
 
     api 'com.google.dagger:dagger:2.19'
     annotationProcessor 'com.google.dagger:dagger-compiler:2.19'

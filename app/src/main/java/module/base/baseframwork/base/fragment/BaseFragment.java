@@ -9,10 +9,10 @@ import android.view.ViewGroup;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
-import module.base.baseframwork.base.presenter.BasePresenter;
+import module.base.baseframwork.base.presenter.BasePresenterMVP;
 import module.base.baseframwork.base.view.BaseFragmentView;
 
-public abstract class BaseFragment <T extends BasePresenter> extends Fragment implements BaseFragmentView {
+public abstract class BaseFragment <T extends BasePresenterMVP> extends Fragment implements BaseFragmentView {
 
     protected T mPresenter;
     protected Context mContext;//activity的上下文对象
@@ -125,7 +125,7 @@ public abstract class BaseFragment <T extends BasePresenter> extends Fragment im
     /**
      * 创建prensenter
      *
-     * @return <T extends BasePresenter> 必须是BasePresenter的子类
+     * @return <T extends BasePresenterMVP> 必须是BasePresenter的子类
      */
     public abstract T initPresenter();
 

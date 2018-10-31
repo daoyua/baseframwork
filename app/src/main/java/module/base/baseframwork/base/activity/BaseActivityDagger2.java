@@ -8,10 +8,10 @@ import javax.inject.Inject;
 import module.base.baseframwork.base.presenter.BasePresenterMVP;
 import module.base.baseframwork.base.view.BaseView;
 
-public abstract class BaseActivityMVP<T extends BasePresenterMVP> extends BaseActivity implements BaseView {
+public abstract class BaseActivityDagger2<T extends BasePresenterMVP> extends BaseActivity implements BaseView {
 
-    @Inject
     /***基础的presenter**/
+    @Inject
     protected T mPresenter;
 
     @Override
@@ -20,8 +20,7 @@ public abstract class BaseActivityMVP<T extends BasePresenterMVP> extends BaseAc
 
 //        mylog("创建Presenter");
         //创建Presenter
-
-        mPresenter = initPresenter();
+         initPresenter();
 
         //类似fragment的与view进行绑定.拿到引用
 //        mylog("presenter onAttach()");
@@ -37,7 +36,7 @@ public abstract class BaseActivityMVP<T extends BasePresenterMVP> extends BaseAc
     }
 
     //    public abstract void initData();
-    protected abstract T initPresenter();
+    protected abstract void initPresenter();
 
     @Override
     public void onSaveInstanceState(Bundle outState) {

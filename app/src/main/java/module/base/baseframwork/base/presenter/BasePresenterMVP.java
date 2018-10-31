@@ -1,6 +1,5 @@
 package module.base.baseframwork.base.presenter;
 
-import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
 import android.util.Log;
@@ -13,7 +12,8 @@ import module.base.baseframwork.base.rxbus.RxBus;
 import module.base.baseframwork.base.view.BaseView;
 import module.base.baseframwork.untils.LogUtils;
 
-public abstract class BasePresenter< T extends BaseView>  {
+public abstract class BasePresenterMVP< T extends BaseView>  {
+
 
     protected T mView;
     protected Context mActivity;
@@ -25,7 +25,7 @@ public abstract class BasePresenter< T extends BaseView>  {
     public void onAttch(T view) {
         this.mView = view;
         myCompositeDisposable=new CompositeDisposable();
-        mActivity=this.mView.getContext();
+        mActivity= view.getContext();
     } /**
      * 添加ob到compo
      */
