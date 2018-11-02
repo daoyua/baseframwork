@@ -29,8 +29,8 @@ public class MyNetWorkObsrvable {
             return observable.subscribeOn(Schedulers.io())
                     .unsubscribeOn(Schedulers.io())
                     .observeOn(AndroidSchedulers.mainThread())
-                    .timeout(5, TimeUnit.SECONDS)
-                    .retry(3)
+//                    .timeout(5, TimeUnit.SECONDS)
+//                    .retry(3)
 //                    .subscribe()
                     ;
 //                    .flatMap(new Function<BaseResponse<T>, ObservableSource<T>>() {
