@@ -4,7 +4,6 @@ import android.os.Bundle;
 
 import androidx.fragment.app.FragmentActivity;
 import module.base.baseframwork.R;
-import module.base.baseframwork.base.activity.BaseActivity;
 import module.base.baseframwork.base.activity.BaseActivityMVP;
 import module.base.baseframwork.test.mvp.presenter.TestPresenter;
 
@@ -41,10 +40,6 @@ public class TestDaggerActivity extends BaseActivityMVP<TestPresenter> {
 
     }
 
-    @Override
-    protected BaseActivity getActivity() {
-        return this;
-    }
 
     @Override
     public int intiLayout() {
