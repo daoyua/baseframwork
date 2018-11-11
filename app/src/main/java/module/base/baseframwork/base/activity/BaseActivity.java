@@ -23,6 +23,11 @@ public abstract class BaseActivity extends AppCompatActivity implements BaseView
     protected final String TAG = this.getClass().getSimpleName();
 
     @Override
+    public void isNightMode(boolean isNight) {
+
+    }
+
+    @Override
     public Context getContext() {
         return this;
     }
