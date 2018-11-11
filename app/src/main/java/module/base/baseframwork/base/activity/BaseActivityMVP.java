@@ -1,9 +1,6 @@
 package module.base.baseframwork.base.activity;
 
-import android.content.Context;
 import android.os.Bundle;
-
-import javax.inject.Inject;
 
 import module.base.baseframwork.base.presenter.BasePresenter;
 import module.base.baseframwork.base.view.BaseView;
@@ -59,9 +56,6 @@ public abstract class BaseActivityMVP<T extends BasePresenter> extends BaseActiv
      */
     protected abstract void onCreateActivity(Bundle savedInstanceState);
 
-    @Override
-    public Context getContext() {
-        return this;
-    }
+
 
 }

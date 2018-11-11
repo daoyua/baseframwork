@@ -1,7 +1,7 @@
 package module.base.baseframwork.base.activity;
 
 
-import android.app.Activity;
+import android.content.Context;
 import android.os.Bundle;
 import android.view.Window;
 import android.view.WindowManager;
@@ -22,6 +22,10 @@ public abstract class BaseActivity extends AppCompatActivity implements BaseView
     /***获取TAG的activity名称**/
     protected final String TAG = this.getClass().getSimpleName();
 
+    @Override
+    public Context getContext() {
+        return this;
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
