@@ -21,6 +21,7 @@ public abstract class BaseActivity extends AppCompatActivity implements BaseView
     private static Toast toast;
     /***获取TAG的activity名称**/
     protected final String TAG = this.getClass().getSimpleName();
+    /***日间或晚上**/
     private  boolean isNight =false;
     @Override
     public void isNightMode(boolean isNight) {
