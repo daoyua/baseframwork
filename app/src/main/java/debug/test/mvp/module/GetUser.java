@@ -1,4 +1,4 @@
-package module.base.baseframwork.test.mvp.module;
+package debug.test.mvp.module;
 
 import io.reactivex.Observable;
 import retrofit2.Call;

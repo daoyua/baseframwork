@@ -1,4 +1,4 @@
-package module.base.baseframwork.test.mvp.view;
+package debug.test.mvp.view;
 
 import module.base.baseframwork.base.view.BaseView;
 

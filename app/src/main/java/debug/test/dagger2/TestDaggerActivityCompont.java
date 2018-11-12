@@ -1,7 +1,7 @@
-package module.base.baseframwork.test.dagger2;
+package debug.test.dagger2;
 
 import dagger.Component;
-import module.base.baseframwork.test.TestDaggerActivity;
+import debug.test.TestDaggerActivity;
 
 @Component(modules = BaseActivityModuleDagger.class)
 public interface TestDaggerActivityCompont {

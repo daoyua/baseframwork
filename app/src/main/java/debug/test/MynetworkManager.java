@@ -1,10 +1,10 @@
-package module.base.baseframwork.test;
+package debug.test;
 
 import io.reactivex.Observable;
 import module.base.baseframwork.base.retrofit.MyNetWorkObsrvable;
 import module.base.baseframwork.base.retrofit.RetrofitFactory;
-import module.base.baseframwork.test.mvp.module.GetUser;
-import module.base.baseframwork.test.mvp.module.UserResponse;
+import debug.test.mvp.module.GetUser;
+import debug.test.mvp.module.UserResponse;
 import retrofit2.Retrofit;
 
 public  class MynetworkManager {

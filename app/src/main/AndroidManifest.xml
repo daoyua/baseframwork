@@ -3,14 +3,14 @@
     package="module.base.baseframwork">
 <uses-permission android:name="android.permission.INTERNET"></uses-permission>
     <application
-        android:name=".test.MyApplication"
+        android:name="debug.test.MyApplication"
         android:allowBackup="false"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".test.TestDaggerActivity">
+        <activity android:name="debug.test.TestDaggerActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

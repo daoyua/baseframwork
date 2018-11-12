@@ -1,11 +1,11 @@
-package module.base.baseframwork.test;
+package debug.test;
 
 import android.os.Bundle;
 
 import androidx.fragment.app.FragmentActivity;
 import module.base.baseframwork.R;
 import module.base.baseframwork.base.activity.BaseActivityMVP;
-import module.base.baseframwork.test.mvp.presenter.TestPresenter;
+import debug.test.mvp.presenter.TestPresenter;
 
 public class TestDaggerActivity extends BaseActivityMVP<TestPresenter> {
 //public class TestDaggerActivity extends BaseActivityDagger<TestPresenter> {

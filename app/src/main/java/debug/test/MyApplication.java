@@ -1,4 +1,4 @@
-package module.base.baseframwork.test;
+package debug.test;
 
 import module.base.baseframwork.base.BaseApplication;
 
