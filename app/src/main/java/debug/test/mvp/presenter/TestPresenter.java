@@ -1,4 +1,4 @@
-package module.base.baseframwork.test.mvp.presenter;
+package debug.test.mvp.presenter;
 
 import android.os.Bundle;
 
@@ -10,9 +10,9 @@ import module.base.baseframwork.base.presenter.BasePresenter;
 import module.base.baseframwork.base.retrofit.CompositeDisposableInter;
 import module.base.baseframwork.base.retrofit.SimpleSubscriber;
 import module.base.baseframwork.base.rxbus.Event;
-import module.base.baseframwork.test.MynetworkManager;
-import module.base.baseframwork.test.mvp.module.UserResponse;
-import module.base.baseframwork.test.mvp.view.TestView;
+import debug.test.MynetworkManager;
+import debug.test.mvp.module.UserResponse;
+import debug.test.mvp.view.TestView;
 import module.base.baseframwork.untils.LogUtils;
 
 public class TestPresenter extends BasePresenter<TestView> {

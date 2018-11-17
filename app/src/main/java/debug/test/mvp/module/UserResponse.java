@@ -1,4 +1,4 @@
-package module.base.baseframwork.test.mvp.module;
+package debug.test.mvp.module;
 
 import module.base.baseframwork.base.response.BaseResponse;
 
