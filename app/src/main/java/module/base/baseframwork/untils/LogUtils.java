@@ -12,7 +12,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
 
-import static androidx.test.InstrumentationRegistry.getContext;
+
 
 public class LogUtils {
     private LogUtils() {
@@ -33,29 +33,29 @@ public class LogUtils {
      *                  @param logFilter 输入日志类型有{@code v, d, i, w, e}<br>v代表输出所有信息，w则只输出警告... *
      *                  @param tag 标签
      */
-    public static void init(boolean logSwitch, boolean log2FileSwitch, char logFilter, String tag) {
-        if (Environment.MEDIA_MOUNTED.equals(Environment.getExternalStorageState())) {
-            dir = getContext().getExternalCacheDir().getPath() + File.separator;
-        } else {
-            dir = getContext().getCacheDir().getPath() + File.separator;
-        }
-        LogUtils.logSwitch = logSwitch;
-        LogUtils.log2FileSwitch = log2FileSwitch;
-        LogUtils.logFilter = logFilter;
-        LogUtils.tag = tag;
-    }
+//    public static void init(boolean logSwitch, boolean log2FileSwitch, char logFilter, String tag) {
+//        if (Environment.MEDIA_MOUNTED.equals(Environment.getExternalStorageState())) {
+//            dir = getContext().getExternalCacheDir().getPath() + File.separator;
+//        } else {
+//            dir = getContext().getCacheDir().getPath() + File.separator;
+//        }
+//        LogUtils.logSwitch = logSwitch;
+//        LogUtils.log2FileSwitch = log2FileSwitch;
+//        LogUtils.logFilter = logFilter;
+//        LogUtils.tag = tag;
+//    }
 
-    /**
-     * 获取LogUtils建造者 * <p>与{@link #init(boolean, boolean, char, String)}两者选其一</p> * * @return Builder对象
-     */
-    public static Builder getBuilder() {
-        if (Environment.MEDIA_MOUNTED.equals(Environment.getExternalStorageState())) {
-            dir = getContext().getExternalCacheDir().getPath() + File.separator + "log" + File.separator;
-        } else {
-            dir = getContext().getCacheDir().getPath() + File.separator + "log" + File.separator;
-        }
-        return new Builder();
-    }
+//    /**
+//     * 获取LogUtils建造者 * <p>与{@link #init(boolean, boolean, char, String)}两者选其一</p> * * @return Builder对象
+//     */
+//    public static Builder getBuilder() {
+//        if (Environment.MEDIA_MOUNTED.equals(Environment.getExternalStorageState())) {
+//            dir = getContext().getExternalCacheDir().getPath() + File.separator + "log" + File.separator;
+//        } else {
+//            dir = getContext().getCacheDir().getPath() + File.separator + "log" + File.separator;
+//        }
+//        return new Builder();
+//    }
 
     public static class Builder {
         private boolean logSwitch = true;
