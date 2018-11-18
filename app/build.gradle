@@ -55,23 +55,42 @@ android {
 dependencies {
     //    implementation fileTree(include: ['*.jar'], dir: 'libs')
     //常规
-    api mlibrarys.appcompat
-    api mlibrarys.junit
-    api mlibrarys.test_runner
-    api mlibrarys.test_espresso
-    api mlibrarys.constraintlayout
-    api mlibrarys.legacy_support
-    api mlibrarys.material
+//    api 'androidx.appcompat:appcompat:1.0.0-alpha1'
+//    api mlibrarys.junit
+//    api mlibrarys.test_runner
+//    api mlibrarys.test_espresso
+//    api mlibrarys.constraintlayout
+//    api mlibrarys.legacy_support
+//    api mlibrarys.material
+//
+//    api mlibrarys.recyclerview
+//    api mlibrarys.gson
+//    //网络
+//    api mlibrarys.retrofit2
+//    api mlibrarys.retrofit2_converter_gson
+//    //Rxjava
+//    api mlibrarys.adapter_rxjava2
+//    api mlibrarys.okhttp3_logging
+//    api mlibrarys.rxandroid
 
-    api mlibrarys.recyclerview
-    api mlibrarys.gson
+    api 'androidx.appcompat:appcompat:1.0.0-alpha1'
+    api 'junit:junit:4.12'
+    api 'androidx.test:runner:1.1.0-alpha3'
+    api 'androidx.test.espresso:espresso-core:3.1.0-alpha3'
+    api 'androidx.constraintlayout:constraintlayout:1.1.2'
+    api 'androidx.legacy:legacy-support-v4:1.0.0-alpha1'
+    api 'com.google.android.material:material:1.0.0-alpha1'
+
+    api 'androidx.recyclerview:recyclerview:1.0.0-rc01'
+    api 'com.google.code.gson:gson:2.8.5'
     //网络
-    api mlibrarys.retrofit2
-    api mlibrarys.retrofit2_converter_gson
+    api  'com.squareup.retrofit2:retrofit:2.4.0'
+    api 'com.squareup.retrofit2:converter-gson:2.4.0'
     //Rxjava
-    api mlibrarys.adapter_rxjava2
-    api mlibrarys.okhttp3_logging
-    api mlibrarys.rxandroid
+    api 'com.squareup.retrofit2:adapter-rxjava2:2.4.0'
+    api 'com.squareup.okhttp3:logging-interceptor:3.11.0'
+    api 'io.reactivex.rxjava2:rxandroid:2.1.0'
+
     api 'com.jakewharton.rxbinding3:rxbinding:3.0.0-alpha1'//rxview rxbinding包含了rxjava2  //    api mlibrarys.rxjava2
     //rxbus
     api 'com.jakewharton.rxrelay2:rxrelay:2.1.0' //rxbus
