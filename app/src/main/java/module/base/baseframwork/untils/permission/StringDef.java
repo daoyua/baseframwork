@@ -1,4 +1,4 @@
-package module.base.baseframwork.permission;
+package module.base.baseframwork.untils.permission;
 
 //
 // Source code recreated from a .class file by IntelliJ IDEA

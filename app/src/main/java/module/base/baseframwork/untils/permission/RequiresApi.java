@@ -1,4 +1,4 @@
-package module.base.baseframwork.permission;
+package module.base.baseframwork.untils.permission;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

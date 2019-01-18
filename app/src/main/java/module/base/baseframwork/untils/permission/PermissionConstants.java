@@ -1,4 +1,4 @@
-package module.base.baseframwork.permission;
+package module.base.baseframwork.untils.permission;
 
 import android.Manifest;
 import android.Manifest.permission;
