@@ -29,6 +29,7 @@ public class CrashHandler implements Thread.UncaughtExceptionHandler {
      * 获取CrashHandler实例 ,单例模式
      */
     public static CrashHandler getInstance() {
+
         if (INSTANCE == null)
             INSTANCE = new CrashHandler();
         return INSTANCE;
