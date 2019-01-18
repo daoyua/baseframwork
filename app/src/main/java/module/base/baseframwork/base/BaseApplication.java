@@ -11,6 +11,13 @@ import module.base.baseframwork.untils.MyConfig;
 public abstract class BaseApplication extends Application {
     public static Context mContext;
     CrashHandler crashHandler;
+
+    private static BaseApplication instance;
+
+    public static BaseApplication getApplication() {
+        return instance;
+    }
+
     @Override
     public void onCreate() {
         super.onCreate();
